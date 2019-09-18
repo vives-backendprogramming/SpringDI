@@ -7,7 +7,10 @@ public class TemplateService {
     private File templateFile;
 
     public TemplateService() {
-        this.templateFile = new File("/template");
+        String path = "/template";
+        this.templateFile = new File(path);
+        // Log de gebruikte templateFile
+        System.out.println("Template is: " + this.templateFile.getName());
     }
 
     public String getStartTemplate(){
