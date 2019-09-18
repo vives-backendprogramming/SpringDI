@@ -2,6 +2,8 @@ package be.vives.ti.dao;
 
 import be.vives.ti.model.Student;
 import be.vives.ti.model.Teacher;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -10,6 +12,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class StudentDao {
 
     private DataSource ds;

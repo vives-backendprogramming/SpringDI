@@ -2,7 +2,10 @@ package be.vives.ti.service;
 
 import be.vives.ti.model.Student;
 import be.vives.ti.model.Teacher;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class EmailService {
 
     private TemplateService templateService;

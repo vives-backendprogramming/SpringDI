@@ -1,12 +1,13 @@
 package be.vives.ti.service;
 
-import be.vives.ti.dao.StudentClassDao;
-import be.vives.ti.dao.StudentDao;
 import be.vives.ti.dao.TeacherDao;
 import be.vives.ti.model.Student;
 import be.vives.ti.model.StudentClass;
 import be.vives.ti.model.Teacher;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class TeacherService {
 
     private TeacherDao teacherDao;

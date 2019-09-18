@@ -1,11 +1,14 @@
 package be.vives.ti.dao;
 
 import be.vives.ti.model.StudentClass;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+@Repository
 public class StudentClassDao {
     private DataSource ds;
 
