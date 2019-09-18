@@ -8,6 +8,7 @@ public class TemplateService {
 
     public TemplateService(File templateFile) {
         this.templateFile = templateFile;
+        System.out.println("Template is: " + this.templateFile.getName());
     }
 
     public String getStartTemplate(){

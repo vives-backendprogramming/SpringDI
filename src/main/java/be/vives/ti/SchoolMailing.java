@@ -10,12 +10,15 @@ import java.io.File;
 
 public class SchoolMailing
 {
+
+    private static String pathname = "/template.xml";
+
     public static void main( String[] args )
     {
+        File f = new File(pathname);
         DataSource ds = new MyOwnDataSource();
         TeacherDao teacherDao = new TeacherDao(ds);
         StudentDao studentDao = new StudentDao(ds);
-        File f = new File("/template.xml");
         TemplateService templateService = new TemplateService(f);
         EmailService emailService = new EmailService(templateService);
         StudentClassDao studentClassDao = new StudentClassDao(ds);
