@@ -3,12 +3,14 @@ package be.vives.ti.service;
 import be.vives.ti.model.Student;
 import be.vives.ti.model.Teacher;
 
+import java.io.File;
+
 public class EmailService {
 
     private TemplateService templateService;
 
-    public EmailService(TemplateService templateService) {
-        this.templateService = templateService;
+    public EmailService() {
+        this.templateService = new TemplateService();
     }
 
     public void sendEmail(Teacher teacher, String message, Student student) {

@@ -6,8 +6,8 @@ public class TemplateService {
 
     private File templateFile;
 
-    public TemplateService(File templateFile) {
-        this.templateFile = templateFile;
+    public TemplateService() {
+        this.templateFile = new File("/template");
     }
 
     public String getStartTemplate(){

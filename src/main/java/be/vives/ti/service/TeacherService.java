@@ -14,11 +14,11 @@ public class TeacherService {
     private EmailService emailService;
     private StudentClassService studentClassService;
 
-    public TeacherService(TeacherDao teacherDao, StudentService studentService, EmailService emailService, StudentClassService studentClassService) {
-        this.teacherDao = teacherDao;
-        this.studentService = studentService;
-        this.emailService = emailService;
-        this.studentClassService = studentClassService;
+    public TeacherService() {
+        this.teacherDao = new TeacherDao();
+        this.studentService = new StudentService();
+        this.emailService = new EmailService();
+        this.studentClassService = new StudentClassService();
     }
 
     public void sendMessage(Integer fromTeacherId, String message, Integer toStudentId) {

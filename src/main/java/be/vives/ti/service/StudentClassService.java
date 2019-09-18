@@ -11,9 +11,9 @@ public class StudentClassService {
     private StudentClassDao studentClassDao;
     private StudentService studentService;
 
-    public StudentClassService(StudentClassDao studentClassDao, StudentService studentService) {
-        this.studentClassDao = studentClassDao;
-        this.studentService = studentService;
+    public StudentClassService() {
+        this.studentClassDao = new StudentClassDao();
+        this.studentService = new StudentService();
     }
 
     public StudentClass findByName(String className) {

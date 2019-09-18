@@ -1,12 +1,11 @@
 package be.vives.ti.dao;
 
+import be.vives.ti.dao.util.MyOwnDataSource;
 import be.vives.ti.model.Student;
-import be.vives.ti.model.Teacher;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,8 +13,8 @@ public class StudentDao {
 
     private DataSource ds;
 
-    public StudentDao(DataSource ds) {
-        this.ds = ds;
+    public StudentDao() {
+        this.ds = new MyOwnDataSource();
     }
 
     public Student get(int studentId) {
