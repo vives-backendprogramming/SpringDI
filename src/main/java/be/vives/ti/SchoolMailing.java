@@ -12,7 +12,7 @@ public class SchoolMailing
         ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
 
         // get Bean by type
-        TeacherService teacherService = (TeacherService) context.getBean(TeacherService.class);
+        TeacherService teacherService = context.getBean(TeacherService.class);
         teacherService.sendMessage(1, "Waarom was je afwezig?", 10);
         teacherService.sendMessageToAllStudentsOfClass(1, "3APP", "Afwerken tegen volgende les");
     }
