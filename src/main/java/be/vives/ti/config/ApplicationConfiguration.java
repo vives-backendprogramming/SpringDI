@@ -3,6 +3,7 @@ package be.vives.ti.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Controller;
 
 import java.io.File;
@@ -11,6 +12,7 @@ import java.io.File;
 @ComponentScan(value = "be.vives.ti", excludeFilters={
         @ComponentScan.Filter(Controller.class)})
       //  @ComponentScan.Filter(type= FilterType.ANNOTATION, classes = Controller.class)})
+@PropertySource("classpath:/application.properties")
 public class ApplicationConfiguration {
 
     @Bean

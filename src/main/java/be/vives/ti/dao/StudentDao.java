@@ -1,14 +1,11 @@
 package be.vives.ti.dao;
 
 import be.vives.ti.model.Student;
-import be.vives.ti.model.Teacher;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +32,14 @@ public class StudentDao {
 
 
     public List<Student> findAllStudentsFromClass(String className) {
+
+        try {
+            Connection connection = ds.getConnection();
+        } catch (SQLException e) {
+            // not a great way to manage exceptions
+            e.printStackTrace();
+        }
+
         ArrayList<Student> students = new ArrayList();
 
         students.add(new Student(20,"Kiara", "Nunez"));

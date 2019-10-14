@@ -1,5 +1,6 @@
 package be.vives.ti.dao.util;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
@@ -12,9 +13,24 @@ import java.util.logging.Logger;
 @Component
 public class MyOwnDataSource implements DataSource {
 
+    @Value("${datasource.username}")
+    private String username;
+    @Value("${datasource.password}")
+    private String password;
+    @Value("${datasource.url}")
+    private String url;
+
+    public void setup(){
+        System.out.println("*** DATASOURCE ***");
+        System.out.println("Username: " + username);
+        System.out.println("Password: " + password);
+        System.out.println("Url: " + url);
+        System.out.println("------------------");
+    }
 
     @Override
     public Connection getConnection() throws SQLException {
+        setup();
         return null;
     }
 
