@@ -1,5 +1,7 @@
-# Spring DI
-Oplossing opdrachten
+# Oplossing Opdrachten Spring framework
+Oplossingen van de opdrachten in volgende lessen:
+- Spring Framework: Intro, DI en IoC
+- Spring MVC
 
 5 branches:
 - startversie : versie van waar de student start
