@@ -2,7 +2,6 @@ package be.vives.ti.service;
 
 import be.vives.ti.dao.StudentDao;
 import be.vives.ti.model.Student;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,5 +21,9 @@ public class StudentService {
 
     public Student get(Integer toStudentId) {
         return studentDao.get(toStudentId);
+    }
+
+    public void save(Student student) {
+        studentDao.save(student);
     }
 }

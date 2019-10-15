@@ -1,14 +1,11 @@
 package be.vives.ti.dao;
 
 import be.vives.ti.model.Student;
-import be.vives.ti.model.Teacher;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,5 +42,9 @@ public class StudentDao {
         students.add(new Student(25,"Pippa", "Stone"));
 
         return students;
+    }
+
+    public void save(Student student) {
+        System.out.println("Save student");
     }
 }
