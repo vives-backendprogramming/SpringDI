@@ -10,7 +10,7 @@ import java.util.Random;
 @Controller
 public class WelcomeController {
 
-    @GetMapping("/")
+    @GetMapping()
     public String welcome(Model model) {
         String sysdate = new Date().toString();
         int version = new Random().nextInt(10) + 1;
