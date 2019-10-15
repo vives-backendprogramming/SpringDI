@@ -1,5 +1,5 @@
 # Spring DI
-Oplossing opdracht Spring DI en IoC
+Oplossing opdrachten
 
 5 branches:
 - startversie : versie van waar de student start
