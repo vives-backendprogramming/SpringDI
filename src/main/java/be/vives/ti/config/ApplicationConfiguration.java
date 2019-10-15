@@ -10,7 +10,6 @@ import java.io.File;
 @Configuration
 @ComponentScan(value = "be.vives.ti", excludeFilters={
         @ComponentScan.Filter(Controller.class)})
-      //  @ComponentScan.Filter(type= FilterType.ANNOTATION, classes = Controller.class)})
 public class ApplicationConfiguration {
 
     @Bean
