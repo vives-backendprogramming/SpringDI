@@ -27,12 +27,14 @@ public class StudentDao {
             e.printStackTrace();
         }
         Student s1 = new Student(studentId, "Dustin","Tate");
+        // TODO: pas aan naar je eigen emailadres om de emails daadwerkelijk te ontvangen
+        s1.setEmail("voornaam.familienaam@vives.be");
         return s1;
     }
 
 
     public List<Student> findAllStudentsFromClass(String className) {
-
+        // dummy code
         try {
             Connection connection = ds.getConnection();
         } catch (SQLException e) {
@@ -50,5 +52,9 @@ public class StudentDao {
         students.add(new Student(25,"Pippa", "Stone"));
 
         return students;
+    }
+
+    public void save(Student student) {
+        System.out.println("Save student");
     }
 }

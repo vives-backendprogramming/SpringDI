@@ -14,12 +14,14 @@
             <tr>
                 <th>Voornaam</th>
                 <th>Naam</th>
+                <th>Mail</th>
             </tr>
         </thead>
         <c:forEach items="${students}" var="student">
             <tr>
                 <td>${student.firstName}</td>
                 <td>${student.lastName}</td>
+                <td><a href="<c:url value='/klas/${className}/mail/${student.id}' />" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Mail student</a></td>
             </tr>
         </c:forEach>
     </table>

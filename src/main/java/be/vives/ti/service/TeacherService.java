@@ -4,7 +4,6 @@ import be.vives.ti.dao.TeacherDao;
 import be.vives.ti.model.Student;
 import be.vives.ti.model.StudentClass;
 import be.vives.ti.model.Teacher;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -12,10 +11,10 @@ public class TeacherService {
 
     private TeacherDao teacherDao;
     private StudentService studentService;
-    private EmailService emailService;
+    private IEmailService emailService;
     private StudentClassService studentClassService;
 
-    public TeacherService(TeacherDao teacherDao, StudentService studentService, EmailService emailService, StudentClassService studentClassService) {
+    public TeacherService(TeacherDao teacherDao, StudentService studentService, IEmailService emailService, StudentClassService studentClassService) {
         this.teacherDao = teacherDao;
         this.studentService = studentService;
         this.emailService = emailService;
