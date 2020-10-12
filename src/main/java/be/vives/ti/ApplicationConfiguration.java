@@ -12,13 +12,13 @@ public class ApplicationConfiguration {
 
     @Bean
     public File firstTemplateFile(){
-        File f = new File("/template");
+        File f = new File("/template.xml");
         return f;
     }
 
     @Bean
     public File secondTemplateFile(){
-        File f = new File("/template2");
+        File f = new File("/template2.xml");
         return f;
     }
 }
