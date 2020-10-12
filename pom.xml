@@ -8,7 +8,7 @@
   <artifactId>SpringStart</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>SpringStart</name>
+  <name>SchoolMailingApp</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
