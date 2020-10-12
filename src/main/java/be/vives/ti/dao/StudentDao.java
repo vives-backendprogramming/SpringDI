@@ -1,12 +1,10 @@
 package be.vives.ti.dao;
 
 import be.vives.ti.model.Student;
-import be.vives.ti.model.Teacher;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
