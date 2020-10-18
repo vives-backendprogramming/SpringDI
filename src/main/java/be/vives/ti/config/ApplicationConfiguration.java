@@ -6,22 +6,21 @@ import org.springframework.stereotype.Controller;
 import java.io.File;
 
 @Configuration
-@ComponentScan(value = "be.vives.ti", excludeFilters={
-        @ComponentScan.Filter(Controller.class)})
+@ComponentScan(value = "be.vives.ti", excludeFilters={@ComponentScan.Filter(Controller.class)})
 @PropertySource("classpath:/application.properties")
 public class ApplicationConfiguration {
 
     @Bean
     @Profile("dev")
     public File firstTemplateFile() {
-        File f = new File("/devtemplate");
+        File f = new File("/devtemplate.xml");
         return f;
     }
 
     @Bean
     @Profile("!dev")
     public File secondTemplateFile() {
-        File f = new File("/template");
+        File f = new File("/template.xml");
         return f;
     }
 
