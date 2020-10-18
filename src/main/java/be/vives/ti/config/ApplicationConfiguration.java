@@ -8,8 +8,7 @@ import org.springframework.stereotype.Controller;
 import java.io.File;
 
 @Configuration
-@ComponentScan(value = "be.vives.ti", excludeFilters={
-        @ComponentScan.Filter(Controller.class)})
+@ComponentScan(value = "be.vives.ti", excludeFilters={@ComponentScan.Filter(Controller.class)})
 public class ApplicationConfiguration {
 
     @Bean
