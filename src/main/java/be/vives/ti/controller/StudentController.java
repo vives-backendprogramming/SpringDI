@@ -40,9 +40,7 @@ public class StudentController {
             return "addstudent";
         }
 
-
         studentService.save(student);
-        System.out.println(student);
         return "redirect:/klas/"+className;
     }
 }
