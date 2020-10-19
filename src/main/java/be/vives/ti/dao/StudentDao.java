@@ -28,7 +28,7 @@ public class StudentDao {
         }
         Student s1 = new Student(studentId, "Dustin","Tate");
         // TODO: pas aan naar je eigen emailadres om de emails daadwerkelijk te ontvangen
-        s1.setEmail("voornaam.familienaam@vives.be");
+        s1.setEmail("voornaam.familienaam@vivez.be");
         return s1;
     }
 

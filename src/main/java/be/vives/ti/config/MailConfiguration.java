@@ -30,6 +30,8 @@ public class MailConfiguration {
     private boolean starttls;
     @Value("${mail.smtp.ssl.trust}")
     private String ssltrust;
+    @Value("${mail.from}")
+    private String from;
 
     @Bean
     public JavaMailSender mailSender() {
@@ -54,7 +56,7 @@ public class MailConfiguration {
     @Bean
     public SimpleMailMessage mailMessage() {
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
-        simpleMailMessage.setFrom("noreply@vivesbackend.be");
+        simpleMailMessage.setFrom(from);
         return simpleMailMessage;
     }
 }

@@ -25,8 +25,8 @@ public class ProdEmailService implements IEmailService {
     public void sendEmail(Teacher teacher, String message, Student student) {
         simpleMailMessage.setTo(student.getEmail());
         simpleMailMessage.setSubject("Bericht van " + teacher.getLastName());
-        simpleMailMessage.setText(templateService.getStartTemplate() +
-                 message +
+        simpleMailMessage.setText(templateService.getStartTemplate() + "\n" +
+                 message + "\n" +
                  templateService.getEndTemplate());
 
         javaMailSender.send(simpleMailMessage);
