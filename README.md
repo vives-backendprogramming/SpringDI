@@ -12,4 +12,4 @@ Oplossingen van de opdrachten in volgende lessen:
 ## Spring MVC
 2 branches:
 - webmvc: opdrachten in de les over Spring Web - tem pag. 8 - welcomescherm met statische resources
-- c: 3 extra opdrachten bij Spring Web (lijst van studenten per klas, aanmaken nieuwe student & Bean validation toevoegen)
+- webmvcbeanvalidation: 3 extra opdrachten bij Spring Web (lijst van studenten per klas, aanmaken nieuwe student & Bean validation toevoegen)
