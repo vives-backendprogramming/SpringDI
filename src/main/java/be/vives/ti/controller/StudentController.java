@@ -7,7 +7,7 @@ import be.vives.ti.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.Errors;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -38,12 +38,11 @@ public class StudentController {
     @PostMapping(value = "/klas/{className}/savestudent")
     public String saveStudent(@PathVariable String className,
                               @Valid @ModelAttribute("student") Student student,
-                              Errors errors
+                              BindingResult bindingResult
                               ) {
-        if(errors.hasErrors()){
+        if(bindingResult.hasErrors()){
             return "addstudent";
         }
-
 
         studentService.save(student);
         System.out.println(student);
